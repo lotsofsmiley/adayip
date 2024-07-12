@@ -1,0 +1,257 @@
+html {
+    scroll-behavior: smooth;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+*,
+::after,
+::before {
+    box-sizing: inherit;
+}
+
+a {
+    cursor: pointer;
+}
+
+:root {
+    --dark-background-color: #0f1316;
+    --medium-background-color: #666;
+    --light-background-color: #efefef;
+
+    --contrast-color: rgba(68, 107, 140, 1);
+    --alt-contrast-color: ;
+    --dark-text-color: var(--dark-background-color);
+    --medium-text-color: var(--medium-background-color);
+    --lighter-text-reverse-color: var(--light-background-color);
+    --light-text-reverse-color: #ddd;
+}
+
+
+table {
+    border-collapse: collapse;
+}
+
+
+input, textarea, select {
+    margin-block: 10px;
+    padding: 5px;
+    font-size: 16px;
+}
+
+input {
+    border: none;
+    border-bottom: 1px solid var(--light-text-reverse-color);
+}
+
+.input-long-text {
+    width:350px;
+}
+
+.input-real-long-text {
+    width: 500px;
+}
+
+.insert-button,
+.edit-button,
+.delete-button,
+.return-button {
+    padding-inline: 0.5rem;
+    padding-block: 1rem;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 300;
+    color: black;
+    border-radius: 5px;
+    border: none;
+    width: 90px;
+    height: 30px;
+    margin-inline: 5px;
+    cursor: pointer;
+}
+
+.insert-button {
+    background-color: #1c975d;
+}
+
+.edit-button {
+    background-color: #dba50f;
+}
+
+.delete-button {
+    background-color: #8b0000;
+}
+
+.return-button {
+    background-color: #0066ff;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: 300;
+    text-align: center;
+    
+}
+
+h3 {
+    text-align: center;
+    font-weight: 600;
+}
+
+.company-title {
+    font-size: 30px;
+    font-weight: 200 !important;
+    color: #fff;
+    text-decoration: underline rgba(68, 107, 140, 1);
+}
+
+.noSelect {
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.noSelect:focus {
+    outline: none !important;
+}
+
+/********************************************* Navbar *********************************************/
+
+header{
+    padding-top:1rem; 
+    background:black; 
+    color:white;
+}
+
+nav {
+    display: flex;
+    padding: 1% 1%;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    transition: 0.3s ease-in-out;
+    z-index: 10;
+    background-color: var(--dark-background-color);
+    box-shadow: 0 2px 2px rgba(1, 1, 1, 0.5);
+}
+
+.main {
+    padding: 2rem;
+    margin-left: 220px;
+}
+
+.sidenav {
+    height: 100%;
+    width: 220px;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    background-color: var(--dark-background-color);
+    box-shadow: 0 2px 2px rgba(1, 1, 1, 0.5);
+    overflow-x: hidden;
+    padding-top: 30px;
+}
+
+.sidenav a {
+    padding: 3px 20px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+nav img {
+    width: 150px;
+}
+
+.nav-links {
+    flex: 1;
+    text-align: right;
+}
+
+.nav-links ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 3px 12px;
+    position: relative;
+}
+
+.nav-links ul li::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: rgba(68, 107, 140, 1);
+    display: block;
+    margin: auto;
+    transition: 0.3s;
+}
+
+.nav-links ul li:hover::after {
+    width: 100%;
+}
+
+
+.nav-links ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 300;
+}
+
+.text-box {
+    width: 90%;
+    color: #fff;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+.text-box h1 {
+    font-size: 62px;
+}
+
+.text-box p {
+    margin: 10px 0 40px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.header-button {
+    display: inline-block;
+    text-decoration: none;
+    color: #fff;
+    border: 1px solid #fff;
+    padding: 12px 34px;
+    font-size: 13px;
+    background: transparent;
+    position: relative;
+}
+
+.header-button:hover {
+    border: 1px solid var(--contrast-color);
+    background: var(--contrast-color);
+    transition: 1s;
+}
+
+nav .fa {
+    display: none;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
