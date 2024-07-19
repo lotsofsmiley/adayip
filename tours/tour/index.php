@@ -9,8 +9,8 @@ if ($_SERVER["REQUEST_METHOD"] == "GET") {
     echo "Erro, pedido inválido";
     exit();
 }
-$sql = "SELECT * FROM tour WHERE id = '$id' ";
-$sqlbody = "SELECT * FROM tour_body WHERE id = '$id' ";
+$sql = "SELECT * FROM tour WHERE id = '$id' and language = '$selected_language' ";
+$sqlbody = "SELECT * FROM tour_body WHERE id = '$id' and language = '$selected_language' ";
 $result = mysqli_query($conn, $sql);
 $resultbody = mysqli_query($conn, $sqlbody);
 
@@ -62,10 +62,10 @@ $rowbody = mysqli_fetch_assoc($resultbody);
     <section class="tour-side">
         <div class="tour-side-info">
             <div class="tour-side-title">
-                Reserve já!
+                <?php echo $language['TOUR_SIDE_TITLE']; ?>
             </div>
             <div class="tour-side-subtitle">
-                Escolha uma data.
+                <?php echo $language['TOUR_SIDE_SUBTITLE']; ?>
             </div>
         </div>
         <div class="tour-side-calendarbox">
@@ -76,13 +76,13 @@ $rowbody = mysqli_fetch_assoc($resultbody);
 
                 <?php
                 $weekdays = array(
-                    'Sunday' => 'Domingo',
-                    'Monday' => 'Segunda-feira',
-                    'Tuesday' => 'Terça-feira',
-                    'Wednesday' => 'Quarta-feira',
-                    'Thursday' => 'Quinta-feira',
-                    'Friday' => 'Sexta-feira',
-                    'Saturday' => 'Sábado'
+                    'Sunday' => $language['SUNDAY'],
+                    'Monday' => $language['MONDAY'],
+                    'Tuesday' => $language['TUESDAY'],
+                    'Wednesday' => $language['WEDNESDAY'],
+                    'Thursday' => $language['THURSDAY'],
+                    'Friday' => $language['FRIDAY'],
+                    'Saturday' => $language['SATURDAY']
                 );
 
                 //Procura os dias que já estão cheios
@@ -159,7 +159,7 @@ $rowbody = mysqli_fetch_assoc($resultbody);
                                     8:30/9:00 --> " . date('H:i', strtotime($row['ending'])) . "
                                 </div>
                                 <div class='info-tickets'>
-                                    " . $tickets_left . " Bilhetes disponíveis
+                                    " . $tickets_left . " " . $language['TOUR_SIDE_AVAILABILITY'] . "
                                 </div>
                             </div>
                             <div class='tour-side-dates-action'>

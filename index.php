@@ -7,6 +7,8 @@ if (isset($_GET['p']))
 // Include database connection
 require('./assets/scripts/db/connect.php');
 
+
+
 $sql = "SELECT * FROM social_media";
 $result = mysqli_query($conn, $sql);
 $sql2 = "SELECT * FROM language";
@@ -108,7 +110,7 @@ if (isset($_SESSION['selected_language'])) {
                 <li class="nav-items menu-sub-item hover"><a class="noSelect" href="index.php#tours"><?php echo $language['NAV_TOURS'] ?></a></li>
                 <li class="nav-items menu-sub-item hover"><a class="noSelect" href="index.php#contact"><?php echo $language['NAV_CONTACT'] ?></a></li>
                 <li class="nav-items menu-sub-item"></li>
-                <li class="nav-items book-button"><a class="noSelect" href="index.php#tours"><?php echo $language['NAV_BOOK_BUTTON'] ?></a></li>
+                <li class="nav-items book-button"><a class="noSelect" href="./?p=2"><?php echo $language['NAV_BOOK_BUTTON'] ?></a></li>
                 <li class="nav-items menu-sub-item"></li>
 
                 <li class="nav-items nav-language">
@@ -159,7 +161,6 @@ if (isset($_SESSION['selected_language'])) {
             case 3:
                 include("./contact/index.php");
                 break;
-
             case 5:
                 include("./login/logout.php");
                 break;

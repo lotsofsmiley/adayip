@@ -32,4 +32,7 @@ $language['ABOUT_TEXT_2'] = 'A história de Manuel e sua família ganhou vida qu
 $language['ABOUT_TEXT_3'] = 'Unidos pelo amor e paixão pelo Vale do Douro, Manuel, a sua família e a sua equipa apaixonada estão prontos para compartilhar a jornada mais emocionante de sua vida.<br><br> Junte-se a nós e deixe-se levar pela emoção enquanto descobrimos juntos a essência do Vale do Douro, uma experiência que vai tocar o seu coração e despertar os seus sentidos.  Bem-vindo ao aDayinDouro - onde a paixão, a descoberta e os laços familiares se encontram.';
 $language['TEAM_TITLE'] = 'Membros da família';
 $language['TEAM_TEXT'] = 'Conheça a nossa fantástica equipa.';
+
+$language['TOURS_TITLE'] = "Experiências";
+$language['TOURS_DESCRIPTION'] = "Aqui pode conferir as nossas diferentes opções de passeios vínicos. De acordo com o seu perfil, personalidade e orçamento, podemos proporcionar-lhe uma experiência de vida que nunca irá esquecer! Faça parte da nossa família inscrevendo-se para um tour de vinhos abaixo!";
 ?>

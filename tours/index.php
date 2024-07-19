@@ -4,9 +4,8 @@
 
 <section>
     <div class="tours-text-box">
-        <h1>Tours</h1>
-        <p class="paragraph-description">Aqui pode conferir as nossas diferentes opções de passeios vínicos. De acordo com o seu perfil, personalidade e orçamento,
-            podemos proporcionar-lhe uma experiência de vida que nunca irá esquecer! Faça parte da nossa família inscrevendo-se para um tour de vinhos abaixo!</p>
+        <h1><?php echo $language['TOURS_TITLE'] ?></h1>
+        <p class="paragraph-description"><?php echo $language['TOURS_DESCRIPTION'] ?></p>
     </div>
 </section>
 
@@ -15,7 +14,8 @@
     <div class="tour-tours">
         <?php
         echo "<div class='tour-row'>";
-        $showtours = "SELECT * FROM tour order by id;";
+        $selected_language = mysqli_real_escape_string($conn, $_SESSION['selected_language']);
+        $showtours = "SELECT * FROM tour WHERE language = $selected_language order by id; ";
         if ($show = mysqli_query($conn, $showtours))
             while ($row = mysqli_fetch_assoc($show))
                 echo "
